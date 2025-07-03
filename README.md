@@ -1,8 +1,8 @@
 # GasMobile Landing Page
 
-This repository contains a static website for **GasMobile**, a mobile app that connects gas delivery trucks with households in Mexico. The landing page targets consumers and vendors, providing basic information about the app and links to legal documents. El contenido principal está escrito en español e incluye un selector de idioma con Google Translate para soportar inglés, alemán, chino, francés y japonés.
+This repository contains a static website for **GasMobile**, a mobile app that connects gas delivery trucks with households in Mexico. The landing page targets consumers and vendors, providing basic information about the app and links to legal documents. El contenido principal está escrito en español y puede cambiarse a inglés mediante un selector desplegable. Las traducciones están definidas dentro del código y no dependen de servicios externos.
 
-The site is organized for deployment on GitHub Pages and includes SEO files and a simple PWA manifest.
+The site is organized for deployment on GitHub Pages and includes SEO files and a simple PWA manifest. All styles use an orange palette derived from the GasMobile logo, which should be placed at `assets/img/logo.jpg` (not included in this repository).
 
 ## Structure
 - `index.html` – main landing page
