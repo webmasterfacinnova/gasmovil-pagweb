@@ -10,11 +10,11 @@
     <link rel="manifest" href="/manifest.json">
     <meta property="og:title" content="GasMobile - Servicio de entrega de gas">
     <meta property="og:description" content="Recibe gas a domicilio con la app GasMobile.">
-    <meta property="og:image" content="https://via.placeholder.com/600x400.png?text=GasMobile">
+    <meta property="og:image" content="assets/img/logo.png">
     <meta property="og:url" content="https://example.com/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="https://via.placeholder.com/32.png">
+    <link rel="icon" href="assets/img/logo.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,60 +25,55 @@
 </head>
 <body>
 <header>
-    <h1>GasMobile</h1>
-    <div id="google_translate_element"></div>
+    <h1 class="visually-hidden">GasMobile</h1>
+    <img src="assets/img/logo.png" alt="GasMobile" class="logo">
+    <select id="language-switcher">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
     <nav id="nav">
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre Nosotros</a>
-        <a href="contact.html">Contacto</a>
+        <a href="index.html" data-i18n="nav-home">Inicio</a>
+        <a href="about.html" data-i18n="nav-about">Sobre Nosotros</a>
+        <a href="contact.html" data-i18n="nav-contact">Contacto</a>
     </nav>
 </header>
 <section class="hero">
-    <h2>La forma más fácil de recibir gas</h2>
-    <p>Encuentra los mejores precios y proveedores cercanos en segundos.</p>
+    <h2 data-i18n="hero-title">La forma más fácil de recibir gas</h2>
+    <p data-i18n="hero-text">Encuentra los mejores precios y proveedores cercanos en segundos.</p>
 </section>
 <section class="features">
     <div class="feature">
-        <h3>Transparencia de precios</h3>
-        <p>Conoce el precio antes de ordenar.</p>
+        <h3 data-i18n="feature-price-title">Transparencia de precios</h3>
+        <p data-i18n="feature-price-text">Conoce el precio antes de ordenar.</p>
     </div>
     <div class="feature">
-        <h3>Mapa en tiempo real</h3>
-        <p>Rastrea camiones de gas cerca de tu ubicación.</p>
+        <h3 data-i18n="feature-map-title">Mapa en tiempo real</h3>
+        <p data-i18n="feature-map-text">Rastrea camiones de gas cerca de tu ubicación.</p>
     </div>
     <div class="feature">
-        <h3>Entrega segura</h3>
-        <p>Tu gas llega a tiempo y con seguridad.</p>
+        <h3 data-i18n="feature-safe-title">Entrega segura</h3>
+        <p data-i18n="feature-safe-text">Tu gas llega a tiempo y con seguridad.</p>
     </div>
 </section>
 <section class="features">
     <div class="feature">
-        <h3>Beneficios para vendedores</h3>
-        <p>Aumenta tus ventas y optimiza tus rutas.</p>
+        <h3 data-i18n="feature-vendor-title">Beneficios para vendedores</h3>
+        <p data-i18n="feature-vendor-text">Aumenta tus ventas y optimiza tus rutas.</p>
     </div>
     <div class="feature">
-        <h3>Mayor visibilidad</h3>
-        <p>Llega a más clientes a través de la app.</p>
+        <h3 data-i18n="feature-visibility-title">Mayor visibilidad</h3>
+        <p data-i18n="feature-visibility-text">Llega a más clientes a través de la app.</p>
     </div>
 </section>
 <section class="cta">
-    <h2>Descarga la app</h2>
-    <p><a href="#">Próximamente en Google Play</a></p>
+    <h2 data-i18n="cta-title">Descarga la app</h2>
+    <p><a href="#" data-i18n="cta-text">Próximamente en Google Play</a></p>
 </section>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="legal/terms.html">Términos</a> | <a href="legal/privacy.html">Privacidad</a>
+    <a href="legal/terms.html" data-i18n="footer-terms">Términos</a> |
+    <a href="legal/privacy.html" data-i18n="footer-privacy">Privacidad</a>
 </footer>
 <script src="assets/js/script.js"></script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,de,zh-CN,fr,ja,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
