@@ -11,6 +11,6 @@ The site is organized for deployment on GitHub Pages and includes SEO files and 
 - `legal/terms.html` – terms and conditions
 - `legal/privacy.html` – privacy policy
 - `assets/` – CSS and JavaScript
-- `seo/` – `sitemap.xml`, `robots.txt`, and `ads.txt`
+- `seo/` – `sitemap.xml` and `robots.txt` (the `ads.txt` file lives in the site root)
 
 To view the site locally, open `index.html` in your browser.
