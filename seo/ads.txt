@@ -1,2 +1,2 @@
-# Placeholder for Google AdSense
-example.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Google AdSense
+google.com, pub-6999979117716027, DIRECT, f08c47fec0942fa0
