@@ -12,43 +12,40 @@
     <meta property="og:url" content="https://example.com/contact.html">
     <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/logo.png">
 </head>
 <body>
 <header>
-<h1>Contacto</h1>
-    <div id="google_translate_element"></div>
+    <h1 class="visually-hidden">GasMobile</h1>
+    <img src="assets/img/logo.png" alt="GasMobile" class="logo">
+    <select id="language-switcher">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre Nosotros</a>
-        <a href="contact.html">Contacto</a>
+        <a href="index.html"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
+        <a href="about.html"><span class="lang-es">Sobre Nosotros</span><span class="lang-en">About Us</span></a>
+        <a href="contact.html"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
     </nav>
 </header>
 <main>
     <section class="cta">
         <form>
-            <label for="name">Nombre</label><br>
+            <label for="name"><span class="lang-es">Nombre</span><span class="lang-en">Name</span></label><br>
             <input type="text" id="name" name="name" required><br>
-            <label for="email">Correo electrónico</label><br>
+            <label for="email"><span class="lang-es">Correo electrónico</span><span class="lang-en">Email</span></label><br>
             <input type="email" id="email" name="email" required><br>
-            <label for="message">Mensaje</label><br>
+            <label for="message"><span class="lang-es">Mensaje</span><span class="lang-en">Message</span></label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br>
-            <button type="submit">Enviar</button>
+            <button type="submit"><span class="lang-es">Enviar</span><span class="lang-en">Send</span></button>
         </form>
     </section>
 </main>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="legal/terms.html">Términos</a> | <a href="legal/privacy.html">Privacidad</a>
+    <a href="legal/terms.html"><span class="lang-es">Términos</span><span class="lang-en">Terms</span></a> |
+    <a href="legal/privacy.html"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a>
 </footer>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,de,zh-CN,fr,ja,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

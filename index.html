@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://example.com/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="https://via.placeholder.com/32.png">
+    <link rel="icon" href="assets/img/logo.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,60 +25,69 @@
 </head>
 <body>
 <header>
-    <h1>GasMobile</h1>
-    <div id="google_translate_element"></div>
+    <h1 class="visually-hidden">GasMobile</h1>
+    <img src="assets/img/logo.png" alt="GasMobile" class="logo">
+    <select id="language-switcher">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
     <nav id="nav">
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Sobre Nosotros</a>
-        <a href="contact.html">Contacto</a>
+        <a href="index.html"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
+        <a href="about.html"><span class="lang-es">Sobre Nosotros</span><span class="lang-en">About Us</span></a>
+        <a href="contact.html"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
     </nav>
 </header>
 <section class="hero">
-    <h2>La forma más fácil de recibir gas</h2>
-    <p>Encuentra los mejores precios y proveedores cercanos en segundos.</p>
+    <h2>
+        <span class="lang-es">La forma más fácil de recibir gas</span>
+        <span class="lang-en">The easiest way to get gas delivered</span>
+    </h2>
+    <p>
+        <span class="lang-es">Encuentra los mejores precios y proveedores cercanos en segundos.</span>
+        <span class="lang-en">Find the best prices and nearby suppliers in seconds.</span>
+    </p>
 </section>
 <section class="features">
     <div class="feature">
-        <h3>Transparencia de precios</h3>
-        <p>Conoce el precio antes de ordenar.</p>
+        <h3><span class="lang-es">Transparencia de precios</span><span class="lang-en">Price transparency</span></h3>
+        <p><span class="lang-es">Conoce el precio antes de ordenar.</span><span class="lang-en">Know the price before ordering.</span></p>
     </div>
     <div class="feature">
-        <h3>Mapa en tiempo real</h3>
-        <p>Rastrea camiones de gas cerca de tu ubicación.</p>
+        <h3><span class="lang-es">Mapa en tiempo real</span><span class="lang-en">Real-time map</span></h3>
+        <p><span class="lang-es">Rastrea camiones de gas cerca de tu ubicación.</span><span class="lang-en">Track nearby gas trucks in real time.</span></p>
     </div>
     <div class="feature">
-        <h3>Entrega segura</h3>
-        <p>Tu gas llega a tiempo y con seguridad.</p>
+        <h3><span class="lang-es">Entrega segura</span><span class="lang-en">Secure delivery</span></h3>
+        <p><span class="lang-es">Tu gas llega a tiempo y con seguridad.</span><span class="lang-en">Your gas arrives on time and safely.</span></p>
     </div>
 </section>
 <section class="features">
     <div class="feature">
-        <h3>Beneficios para vendedores</h3>
-        <p>Aumenta tus ventas y optimiza tus rutas.</p>
+        <h3><span class="lang-es">Beneficios para vendedores</span><span class="lang-en">Benefits for vendors</span></h3>
+        <p><span class="lang-es">Aumenta tus ventas y optimiza tus rutas.</span><span class="lang-en">Increase sales and optimize your routes.</span></p>
     </div>
     <div class="feature">
-        <h3>Mayor visibilidad</h3>
-        <p>Llega a más clientes a través de la app.</p>
+        <h3><span class="lang-es">Mayor visibilidad</span><span class="lang-en">Greater visibility</span></h3>
+        <p><span class="lang-es">Llega a más clientes a través de la app.</span><span class="lang-en">Reach more customers through the app.</span></p>
     </div>
 </section>
 <section class="cta">
-    <h2>Descarga la app</h2>
-    <p><a href="#">Próximamente en Google Play</a></p>
+    <h2>
+        <span class="lang-es">Descarga la app</span>
+        <span class="lang-en">Download the app</span>
+    </h2>
+    <p>
+        <a href="#">
+            <span class="lang-es">Próximamente en Google Play</span>
+            <span class="lang-en">Coming soon to Google Play</span>
+        </a>
+    </p>
 </section>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="legal/terms.html">Términos</a> | <a href="legal/privacy.html">Privacidad</a>
+    <a href="legal/terms.html"><span class="lang-es">Términos</span><span class="lang-en">Terms</span></a> |
+    <a href="legal/privacy.html"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a>
 </footer>
 <script src="assets/js/script.js"></script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,de,zh-CN,fr,ja,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
