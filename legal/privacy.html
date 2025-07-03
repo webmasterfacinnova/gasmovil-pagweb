@@ -10,25 +10,33 @@
 </head>
 <body>
 <header>
-    <h1>Política de Privacidad</h1>
-    <div id="google_translate_element"></div>
+    <h1 class="visually-hidden">GasMobile</h1>
+    <img src="../assets/img/logo.png" alt="GasMobile" class="logo">
+    <select id="language-switcher">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
 </header>
 <main>
-    <p>Esta política de privacidad es un texto de ejemplo que describe cómo manejamos tus datos.</p>
+    <h1 data-i18n="privacy-title">Política de Privacidad</h1>
+    <p data-i18n="privacy-intro">En GasMobile valoramos tu privacidad y nos comprometemos a proteger tu información personal. Esta política explica qué datos recopilamos y cómo los utilizamos.</p>
+    <h2 data-i18n="privacy-data-title">Datos que recopilamos</h2>
+    <p data-i18n="privacy-data">Podemos recopilar tu nombre, dirección de correo electrónico y ubicación cuando utilizas nuestra aplicación.</p>
+    <h2 data-i18n="privacy-use-title">Uso de la información</h2>
+    <p data-i18n="privacy-use">Utilizamos la información para proporcionar y mejorar nuestros servicios.</p>
+    <h2 data-i18n="privacy-rights-title">Tus derechos</h2>
+    <p data-i18n="privacy-rights">Puedes solicitar acceso o eliminación de tus datos en cualquier momento.</p>
+    <h2 data-i18n="privacy-cookies-title">Uso de cookies</h2>
+    <p data-i18n="privacy-cookies">Este sitio utiliza cookies para mejorar la experiencia de usuario y realizar estadísticas de uso.</p>
+    <h2 data-i18n="privacy-law-title">Legislación aplicable</h2>
+    <p data-i18n="privacy-law">La presente política se rige por las leyes mexicanas y cualquier disputa se someterá a los tribunales de Ciudad de México.</p>
+    <p data-i18n="privacy-contact">Si tienes preguntas, contáctanos en soporte@gasmobile.com.</p>
 </main>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="terms.html">Términos</a> | <a href="privacy.html">Privacidad</a>
+    <a href="terms.html" data-i18n="footer-terms">Términos</a> |
+    <a href="privacy.html" data-i18n="footer-privacy">Privacidad</a>
 </footer>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'en,de,zh-CN,fr,ja,es',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
