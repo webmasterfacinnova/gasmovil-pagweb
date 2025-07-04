@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://example.com/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -26,68 +26,59 @@
 <body>
 <header>
     <h1 class="visually-hidden">GasMobile</h1>
-    <img src="assets/img/logo.png" alt="GasMobile" class="logo">
+    <img src="assets/img/logo.jpg" alt="GasMobile" class="logo">
     <select id="language-switcher">
         <option value="es">ES</option>
         <option value="en">EN</option>
     </select>
     <nav id="nav">
-        <a href="index.html"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
-        <a href="about.html"><span class="lang-es">Sobre Nosotros</span><span class="lang-en">About Us</span></a>
-        <a href="contact.html"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+        <a href="index.html" data-i18n="navHome">Inicio</a>
+        <a href="about.html" data-i18n="navAbout">Sobre Nosotros</a>
+        <a href="contact.html" data-i18n="navContact">Contacto</a>
     </nav>
 </header>
 <section class="hero">
-    <h2>
-        <span class="lang-es">La forma más fácil de recibir gas</span>
-        <span class="lang-en">The easiest way to get gas delivered</span>
-    </h2>
-    <p>
-        <span class="lang-es">Encuentra los mejores precios y proveedores cercanos en segundos.</span>
-        <span class="lang-en">Find the best prices and nearby suppliers in seconds.</span>
-    </p>
+    <h2 data-i18n="heroTitle">La forma más fácil de recibir gas</h2>
+    <p data-i18n="heroDesc">Encuentra los mejores precios y proveedores cercanos en segundos.</p>
 </section>
 <section class="features">
     <div class="feature">
-        <h3><span class="lang-es">Transparencia de precios</span><span class="lang-en">Price transparency</span></h3>
-        <p><span class="lang-es">Conoce el precio antes de ordenar.</span><span class="lang-en">Know the price before ordering.</span></p>
+        <h3 data-i18n="featurePriceTitle">Transparencia de precios</h3>
+        <p data-i18n="featurePriceDesc">Conoce el precio antes de ordenar.</p>
     </div>
     <div class="feature">
-        <h3><span class="lang-es">Mapa en tiempo real</span><span class="lang-en">Real-time map</span></h3>
-        <p><span class="lang-es">Rastrea camiones de gas cerca de tu ubicación.</span><span class="lang-en">Track nearby gas trucks in real time.</span></p>
+        <h3 data-i18n="featureMapTitle">Mapa en tiempo real</h3>
+        <p data-i18n="featureMapDesc">Rastrea camiones de gas cerca de tu ubicación.</p>
     </div>
     <div class="feature">
-        <h3><span class="lang-es">Entrega segura</span><span class="lang-en">Secure delivery</span></h3>
-        <p><span class="lang-es">Tu gas llega a tiempo y con seguridad.</span><span class="lang-en">Your gas arrives on time and safely.</span></p>
+        <h3 data-i18n="featureSafetyTitle">Entrega segura</h3>
+        <p data-i18n="featureSafetyDesc">Tu gas llega a tiempo y con seguridad.</p>
     </div>
 </section>
 <section class="features">
     <div class="feature">
-        <h3><span class="lang-es">Beneficios para vendedores</span><span class="lang-en">Benefits for vendors</span></h3>
-        <p><span class="lang-es">Aumenta tus ventas y optimiza tus rutas.</span><span class="lang-en">Increase sales and optimize your routes.</span></p>
+        <h3 data-i18n="featureVendorTitle">Beneficios para vendedores</h3>
+        <p data-i18n="featureVendorDesc">Aumenta tus ventas y optimiza tus rutas.</p>
     </div>
     <div class="feature">
-        <h3><span class="lang-es">Mayor visibilidad</span><span class="lang-en">Greater visibility</span></h3>
-        <p><span class="lang-es">Llega a más clientes a través de la app.</span><span class="lang-en">Reach more customers through the app.</span></p>
+        <h3 data-i18n="featureVisibilityTitle">Mayor visibilidad</h3>
+        <p data-i18n="featureVisibilityDesc">Llega a más clientes a través de la app.</p>
     </div>
 </section>
 <section class="cta">
-    <h2>
-        <span class="lang-es">Descarga la app</span>
-        <span class="lang-en">Download the app</span>
-    </h2>
+    <h2 data-i18n="ctaTitle">Descarga la app</h2>
     <p>
         <a href="#">
-            <span class="lang-es">Próximamente en Google Play</span>
-            <span class="lang-en">Coming soon to Google Play</span>
+            <span data-i18n="ctaPlay">Próximamente en Google Play</span>
         </a>
     </p>
 </section>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="legal/terms.html"><span class="lang-es">Términos</span><span class="lang-en">Terms</span></a> |
-    <a href="legal/privacy.html"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a>
+    <a href="legal/terms.html" data-i18n="footerTerms">Términos</a> |
+    <a href="legal/privacy.html" data-i18n="footerPrivacy">Privacidad</a>
 </footer>
+<script src="assets/js/translations.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
