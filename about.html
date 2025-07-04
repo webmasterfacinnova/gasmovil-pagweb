@@ -12,35 +12,33 @@
     <meta property="og:url" content="https://example.com/about.html">
     <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo.jpg">
 </head>
 <body>
 <header>
     <h1 class="visually-hidden">GasMobile</h1>
-    <img src="assets/img/logo.png" alt="GasMobile" class="logo">
+    <img src="assets/img/logo.jpg" alt="GasMobile" class="logo">
     <select id="language-switcher">
         <option value="es">ES</option>
         <option value="en">EN</option>
     </select>
     <nav>
-        <a href="index.html"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
-        <a href="about.html"><span class="lang-es">Sobre Nosotros</span><span class="lang-en">About Us</span></a>
-        <a href="contact.html"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+        <a href="index.html" data-i18n="navHome">Inicio</a>
+        <a href="about.html" data-i18n="navAbout">Sobre Nosotros</a>
+        <a href="contact.html" data-i18n="navContact">Contacto</a>
     </nav>
 </header>
 <main>
     <section class="cta">
-        <p>
-            <span class="lang-es">GasMobile está dedicada a hacer la entrega de gas sencilla y transparente para los consumidores y rentable para los vendedores.</span>
-            <span class="lang-en">GasMobile is committed to making gas delivery easy and transparent for consumers and profitable for vendors.</span>
-        </p>
+        <p data-i18n="aboutParagraph">GasMobile está dedicada a hacer la entrega de gas sencilla y transparente para los consumidores y rentable para los vendedores.</p>
     </section>
 </main>
 <footer>
     <p>&copy; 2024 GasMobile</p>
-    <a href="legal/terms.html"><span class="lang-es">Términos</span><span class="lang-en">Terms</span></a> |
-    <a href="legal/privacy.html"><span class="lang-es">Privacidad</span><span class="lang-en">Privacy</span></a>
+    <a href="legal/terms.html" data-i18n="footerTerms">Términos</a> |
+    <a href="legal/privacy.html" data-i18n="footerPrivacy">Privacidad</a>
 </footer>
+<script src="assets/js/translations.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
