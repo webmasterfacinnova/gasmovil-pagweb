@@ -1,0 +1,45 @@
+---
+import { Download, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+---
+
+<footer class="px-4 pb-10 sm:px-6 lg:px-8">
+	<div class="mx-auto max-w-7xl rounded-[2rem] border border-slate-200/80 bg-white px-6 py-8 shadow-lg shadow-slate-950/5 sm:px-8">
+		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+			<div class="flex items-center gap-4">
+				<img src="/assets/img/logo.jpg" alt="Logo Gasmovil" class="h-12 w-12 rounded-2xl object-cover" />
+				<div>
+					<p class="text-base font-semibold text-slate-950">Gasmovil</p>
+					<p class="text-sm text-slate-500">Gas a domicilio con mejor visibilidad para México.</p>
+				</div>
+			</div>
+
+			<div class="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
+				<a href="/legal/privacy" class="transition hover:text-slate-950">Política de privacidad</a>
+				<a href="/legal/terms" class="transition hover:text-slate-950">Términos de uso</a>
+				<a href="#contacto" class="transition hover:text-slate-950">Contacto</a>
+			</div>
+
+			<div class="flex flex-wrap items-center gap-3">
+				<a href="https://play.google.com/store" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Google Play">
+					<Download className="h-4 w-4" />
+				</a>
+				<a href="https://www.facebook.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Facebook">
+					<Facebook className="h-4 w-4" />
+				</a>
+				<a href="https://www.instagram.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Instagram">
+					<Instagram className="h-4 w-4" />
+				</a>
+				<a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="LinkedIn">
+					<Linkedin className="h-4 w-4" />
+				</a>
+				<a href="mailto:contacto@gasmovil.mx" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Correo de contacto">
+					<Mail className="h-4 w-4" />
+				</a>
+			</div>
+		</div>
+
+		<div class="mt-6 border-t border-slate-200 pt-6 text-sm text-slate-500">
+			© 2026 Gasmovil. Todos los derechos reservados.
+		</div>
+	</div>
+</footer>
