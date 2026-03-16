@@ -1,12 +1,14 @@
 ---
 import { Download, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+
+let currentYear = new Date().getFullYear();
 ---
 
 <footer class="px-4 pb-10 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-7xl rounded-[2rem] border border-slate-200/80 bg-white px-6 py-8 shadow-lg shadow-slate-950/5 sm:px-8">
 		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
 			<div class="flex items-center gap-4">
-				<img src="/assets/img/logo.jpg" alt="Logo Gasmovil" class="h-12 w-12 rounded-2xl object-cover" />
+				<img src="/assets/img/icon.png" alt="Logo Gasmovil" class="h-12 w-12 rounded-2xl object-cover" />
 				<div>
 					<p class="text-base font-semibold text-slate-950">Gasmovil</p>
 					<p class="text-sm text-slate-500">Gas a domicilio con mejor visibilidad para México.</p>
@@ -39,7 +41,18 @@ import { Download, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 		</div>
 
 		<div class="mt-6 border-t border-slate-200 pt-6 text-sm text-slate-500">
-			© 2026 Gasmovil. Todos los derechos reservados.
+			<p class="mb-2">
+				Créditos: los mockups de la app fueron generados con
+				<a
+					href="https://mockuphone.com"
+					target="_blank"
+					rel="noreferrer"
+					class="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-950"
+				>
+					MockuPhone
+				</a>.
+			</p>
+			© {currentYear} Gasmovil. Todos los derechos reservados.
 		</div>
 	</div>
 </footer>

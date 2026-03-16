@@ -22,6 +22,7 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "ready">("idle");
+  const recipentEmail = "webmaster@facinnova.com";
 
   function validate(values: FormState) {
     const nextErrors: Errors = {};
@@ -67,7 +68,7 @@ export default function ContactForm() {
       form.message.trim(),
     ].join("\n");
 
-    window.location.href = `mailto:contacto@gasmovil.mx?subject=${encodeURIComponent(
+    window.location.href = `mailto:${recipentEmail}?subject=${encodeURIComponent(
       "Contacto web Gasmovil",
     )}&body=${encodeURIComponent(body)}`;
   }
@@ -134,8 +135,8 @@ export default function ContactForm() {
 
       {status === "ready" ? (
         <p className="rounded-2xl bg-(--client-50) px-4 py-3 text-sm text-(--client-800)">
-          Validación correcta. Si tu cliente de correo no se abrió, escribe a
-          contacto@gasmovil.mx.
+          {`Validación correcta. Si tu cliente de correo no se abrió, escribe a
+          ${recipentEmail}.`}
         </p>
       ) : null}
     </form>

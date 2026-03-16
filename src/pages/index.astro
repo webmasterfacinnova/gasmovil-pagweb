@@ -15,12 +15,14 @@ import {
 import DataPrivacySection from '../components/DataPrivacySection.astro';
 import DualFeatureSection from '../components/DualFeatureSection.astro';
 import Footer from '../components/Footer.astro';
+import MockupSlider from '../components/MockupSlider';
 import Navbar from '../components/Navbar.astro';
-import PhoneMockup from '../components/PhoneMockup.astro';
 import ContactForm from '../components/ContactForm';
 import MainLayout from '../layouts/MainLayout.astro';
 
-const playStoreUrl = 'https://play.google.com/store';
+
+const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil';
+
 ---
 
 <MainLayout
@@ -136,12 +138,8 @@ const playStoreUrl = 'https://play.google.com/store';
 							</div>
 						</div>
 						<div class="order-1 md:order-2">
-							<PhoneMockup
-								variant="customer"
-								title="Mapa de entrega"
-								subtitle="Ruta al cliente con seguimiento vivo"
-								badge="Cliente"
-							/>
+							<img src="/public/assets/img/map-portrait.png" alt="Gasmovil mockup" class="object-cover" />
+							
 						</div>
 					</div>
 				</div>
@@ -150,7 +148,7 @@ const playStoreUrl = 'https://play.google.com/store';
 
 		<section class="px-4 pb-12 sm:px-6 lg:px-8">
 			<div class="mx-auto flex max-w-6xl items-center justify-center gap-4 rounded-full border border-white/10 bg-white/70 px-6 py-4 shadow-lg shadow-slate-950/5 backdrop-blur">
-				<img src="/assets/img/logo.jpg" alt="Logo de Gasmovil" class="h-10 w-10 rounded-2xl object-cover" />
+				<img src="/assets/img/icon.png" alt="Logo de Gasmovil" class="h-10 w-10 rounded-2xl object-cover" />
 				<div class="text-center">
 					<p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">Gasmovil</p>
 					<p class="text-sm text-slate-600">Tecnología para hacer más clara y rápida la entrega de gas LP.</p>
@@ -182,12 +180,15 @@ const playStoreUrl = 'https://play.google.com/store';
 								Cliente
 							</div>
 						</div>
-						<PhoneMockup
-							variant="customer"
-							title="Elige tu gas"
-							subtitle="Cilindro o estacionario, según tu necesidad"
-							badge="MX"
+						<MockupSlider
+							client:visible
+							images={[
+								'/public/assets/img/Stationary-portrait.png',
+								'/public/assets/img/cylinder-portrait.png',
+							]}
+							altPrefix="Gasmovil mockup"
 						/>
+						
 					</div>
 
 					<div class="space-y-4 rounded-[2rem] border border-slate-200/80 bg-white p-6 shadow-lg shadow-slate-950/5">
@@ -200,12 +201,7 @@ const playStoreUrl = 'https://play.google.com/store';
 								Live
 							</div>
 						</div>
-						<PhoneMockup
-							variant="tracking"
-							title="Ruta en tiempo real"
-							subtitle="Actualización visual del trayecto al domicilio"
-							badge="ETA 12m"
-						/>
+						<img src="/public/assets/img/ETA2-portrait.png" alt="Gasmovil mockup" class="object-cover" />
 					</div>
 
 					<div class="space-y-4 rounded-[2rem] border border-slate-200/80 bg-white p-6 shadow-lg shadow-slate-950/5">
@@ -218,12 +214,7 @@ const playStoreUrl = 'https://play.google.com/store';
 								Proveedor
 							</div>
 						</div>
-						<PhoneMockup
-							variant="supplier"
-							title="Gestión operativa"
-							subtitle="Confirma pedidos y navega hacia el cliente"
-							badge="Ruta lista"
-						/>
+						<img src="/public/assets/img/driver-portrait.png" alt="Gasmovil mockup" class="object-cover" />
 					</div>
 				</div>
 			</div>
