@@ -2,8 +2,8 @@ import React, { useState, useEffect, type PropsWithChildren } from "react";
 
 import "./ImageSlider.css";
 
-interface ImageSliderProps {
-  images: string[];
+interface ImageSliderProps extends PropsWithChildren {
+  images: React.ReactNode[];
 }
 
 export function ImageSlider({ images = [] }: ImageSliderProps) {
@@ -36,7 +36,7 @@ export function ImageSlider({ images = [] }: ImageSliderProps) {
   const slidePrev = () => {
     setActiveIndex((val) => {
       if (val <= 0) {
-        return images.length - 1;
+        return images?.length - 1;
       } else {
         return val - 1;
       }
