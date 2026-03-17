@@ -85,6 +85,12 @@ const legalDisclosureReasons = [
 	'Proteger la seguridad personal de usuarios o del publico.',
 	'Proteger frente a responsabilidad legal.',
 ];
+
+const adsPolicy = {
+	providerName: 'Google',
+	dartCookieName: 'DART',
+	googleAdsPolicyUrl: 'https://policies.google.com/technologies/ads',
+};
 ---
 
 <MainLayout
@@ -339,7 +345,26 @@ const legalDisclosureReasons = [
 				</section>
 
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">11. Cambios a esta Politica de Privacidad</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">11. Publicidad de terceros y cookies</h2>
+					<p class="mt-3">
+						Podemos usar proveedores externos para mostrar anuncios en el Servicio. Actualmente,
+						utilizamos servicios de publicidad de {adsPolicy.providerName}.
+					</p>
+					<p class="mt-3">
+						{adsPolicy.providerName}, como proveedor externo, puede utilizar cookies para mostrar
+						anuncios en funcion de tus visitas previas a este y otros sitios web. Entre ellas puede
+						encontrarse la cookie {adsPolicy.dartCookieName}, que permite servir anuncios mas
+						relevantes para los usuarios.
+					</p>
+					<p class="mt-3">
+						Puedes inhabilitar el uso de la cookie {adsPolicy.dartCookieName} y revisar mas
+						informacion sobre publicidad personalizada en la politica de anuncios de
+						{adsPolicy.providerName}: <a class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:text-slate-700" href={adsPolicy.googleAdsPolicyUrl} target="_blank" rel="noopener noreferrer">{adsPolicy.googleAdsPolicyUrl}</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-2xl font-semibold text-slate-950">12. Cambios a esta Politica de Privacidad</h2>
 					<p class="mt-3">
 						Podemos actualizar nuestra Politica de Privacidad periodicamente. Notificaremos cualquier
 						cambio publicando la nueva version en esta pagina.
@@ -356,7 +381,7 @@ const legalDisclosureReasons = [
 				</section>
 
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">12. Contacto</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">13. Contacto</h2>
 					<p class="mt-3">Si tienes dudas sobre esta Politica de Privacidad, puedes contactarnos en:</p>
 					<p class="mt-3 font-semibold text-slate-900">Correo: {policy.contactEmail}</p>
 				</section>

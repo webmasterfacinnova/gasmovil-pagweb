@@ -1,11 +1,25 @@
 ---
-import { Download, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import {
+	siFacebook,
+	siGmail,
+	siGoogleplay,
+	siInstagram,
+	
+} from 'simple-icons/icons';
 
 let currentYear = new Date().getFullYear();
+
+const socialLinks = [
+	{ href: 'https://play.google.com/store', label: 'Google Play', icon: siGoogleplay },
+	{ href: 'https://www.facebook.com', label: 'Facebook', icon: siFacebook },
+	{ href: 'https://www.instagram.com', label: 'Instagram', icon: siInstagram },
+	
+	{ href: 'mailto:contacto@gasmovil.mx', label: 'Correo de contacto', icon: siGmail },
+];
 ---
 
 <footer class="px-4 pb-10 sm:px-6 lg:px-8">
-	<div class="mx-auto max-w-7xl rounded-[2rem] border border-slate-200/80 bg-white px-6 py-8 shadow-lg shadow-slate-950/5 sm:px-8">
+	<div class="mx-auto max-w-7xl rounded-4xl border border-slate-200/80 bg-white px-6 py-8 shadow-lg shadow-slate-950/5 sm:px-8">
 		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
 			<div class="flex items-center gap-4">
 				<img src="/assets/img/icon.png" alt="Logo Gasmovil" class="h-12 w-12 rounded-2xl object-cover" />
@@ -22,27 +36,26 @@ let currentYear = new Date().getFullYear();
 			</div>
 
 			<div class="flex flex-wrap items-center gap-3">
-				<a href="https://play.google.com/store" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Google Play">
-					<Download className="h-4 w-4" />
-				</a>
-				<a href="https://www.facebook.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Facebook">
-					<Facebook className="h-4 w-4" />
-				</a>
-				<a href="https://www.instagram.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Instagram">
-					<Instagram className="h-4 w-4" />
-				</a>
-				<a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="LinkedIn">
-					<Linkedin className="h-4 w-4" />
-				</a>
-				<a href="mailto:contacto@gasmovil.mx" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50" aria-label="Correo de contacto">
-					<Mail className="h-4 w-4" />
-				</a>
+				{socialLinks.map((item) => (
+					<a
+						href={item.href}
+						target={item.href.startsWith('http') ? '_blank' : undefined}
+						rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
+						class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-50"
+						aria-label={item.label}
+					>
+						<svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="currentColor">
+							<path d={item.icon.path} />
+						</svg>
+					</a>
+				))}
 			</div>
 		</div>
 
 		<div class="mt-6 border-t border-slate-200 pt-6 text-sm text-slate-500">
+			<p class="mb-2">Créditos:</p>
 			<p class="mb-2">
-				Créditos: los mockups de la app fueron generados con
+				Los mockups de la app fueron generados con
 				<a
 					href="https://mockuphone.com"
 					target="_blank"
@@ -52,7 +65,19 @@ let currentYear = new Date().getFullYear();
 					MockuPhone
 				</a>.
 			</p>
-			© {currentYear} Gasmovil. Todos los derechos reservados.
+			<p class="mb-2">
+				Los pines del mapa se usan con atribución a
+				<a
+					href="https://www.mappity.org/"
+					target="_blank"
+					rel="noreferrer"
+					class="font-medium text-slate-700 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-950"
+				>
+					Mappity
+				</a>.
+			</p>
+			<p class="text-center">© {currentYear} Gasmovil. Todos los derechos reservados.</p>
+			
 		</div>
 	</div>
 </footer>
