@@ -1,28 +1,48 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import AdBanner from '../../components/AdBanner.astro';
+import { APP_NAME } from '../../lib/appConfig';
+const adSlotIDTop = '3473220690';
 ---
 
 <MainLayout
-	title="Términos de Uso | Gasmovil"
-	description="Términos de uso de Gasmovil para clientes y proveedores en México."
+	title={`Términos de Uso | ${APP_NAME}`}
+	description={`Términos de uso de ${APP_NAME} para clientes y proveedores en México.`}
 >
 	<main class="px-4 py-12 sm:px-6 lg:px-8">
-		<div class="mx-auto max-w-4xl rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5 sm:p-10">
+		<div class="mx-auto max-w-4xl rounded-4xl border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5 sm:p-10">
 			<p class="section-kicker">Legal</p>
 			<h1 class="section-title text-4xl">Términos de uso</h1>
 			<p class="mt-4 text-sm text-slate-500">Última actualización: 12 de marzo de 2026</p>
 
 			<div class="mt-8 space-y-8 text-base leading-8 text-slate-600">
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">1. Objeto del servicio</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">1. Aceptación de los términos</h2>
+					<p class="mt-3">
+						Al acceder, registrarte o utilizar Gasmovil, aceptas estos Términos de Uso y te obligas a
+						cumplirlos. Si no estás de acuerdo con alguna disposición, debes abstenerte de usar la
+						plataforma y sus servicios.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-2xl font-semibold text-slate-950">2. Objeto del servicio</h2>
 					<p class="mt-3">
 						Gasmovil conecta a usuarios que requieren gas LP con proveedores y operadores que ofrecen
 						entrega a domicilio, visualización de ruta y confirmación del pedido dentro de la aplicación.
 					</p>
 				</section>
 
+				<AdBanner
+					adSlot={adSlotIDTop}
+					maxWidth="728px"
+					mobileMinHeight={90}
+					tabletMinHeight={120}
+					desktopMinHeight={180}
+				/>
+
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">2. Obligaciones de usuarios y proveedores</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">3. Obligaciones de usuarios y proveedores</h2>
 					<p class="mt-3">
 						Cada parte debe proporcionar información verdadera, mantener actualizados sus datos y usar la
 						plataforma conforme a la legislación aplicable y a las prácticas comerciales permitidas en México.
@@ -30,7 +50,17 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</section>
 
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">3. Precios, disponibilidad y rutas</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">4. Seguridad</h2>
+					<p class="mt-3">
+						Las personas usuarias deben mantener la confidencialidad de sus credenciales de acceso y
+						notificarnos de inmediato sobre cualquier uso no autorizado de su cuenta o incidente de
+						seguridad. Gasmovil implementa medidas razonables para proteger la plataforma, pero no puede
+						garantizar una seguridad absoluta frente a ataques, fallas técnicas o accesos indebidos de terceros.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-2xl font-semibold text-slate-950">5. Precios, disponibilidad y rutas</h2>
 					<p class="mt-3">
 						Los precios y tiempos visibles dependen de la información operativa capturada por el proveedor y
 						la disponibilidad en la zona. Gasmovil busca mostrar datos útiles, pero no garantiza cobertura
@@ -39,7 +69,28 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</section>
 
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">4. Responsabilidad</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">6. Propiedad intelectual</h2>
+					<p class="mt-3">
+						El contenido de la plataforma, incluyendo textos, marcas, logotipos, diseño, interfaces,
+						software, imagenes y demas elementos relacionados con Gasmovil, es propiedad de sus titulares
+						legitimos y se encuentra protegido por la legislación aplicable en materia de propiedad
+						intelectual. Queda prohibido copiar, modificar, distribuir, sublicenciar o explotar dicho
+						contenido sin autorización previa y por escrito.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-2xl font-semibold text-slate-950">7. Limitaciones de responsabilidad</h2>
+					<p class="mt-3">
+						En la máxima medida permitida por la ley, Gasmovil no será responsable por daños indirectos,
+						incidentales, especiales, consecuenciales o pérdida de ingresos, datos, oportunidades o beneficios
+						derivados del uso o imposibilidad de uso de la plataforma. El servicio se ofrece sobre una base
+						de disponibilidad razonable y la Empresa no garantiza ausencia de interrupciones, errores o fallas.
+					</p>
+				</section>
+
+				<section>
+					<h2 class="text-2xl font-semibold text-slate-950">8. Responsabilidad</h2>
 					<p class="mt-3">
 						La plataforma actúa como habilitador digital del contacto y seguimiento operativo. Las condiciones
 						finales de entrega, abastecimiento y servicio son responsabilidad de las partes involucradas en el
@@ -48,7 +99,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</section>
 
 				<section>
-					<h2 class="text-2xl font-semibold text-slate-950">5. Modificaciones</h2>
+					<h2 class="text-2xl font-semibold text-slate-950">9. Modificaciones</h2>
 					<p class="mt-3">
 						Gasmovil podrá actualizar estos términos para reflejar cambios de producto, operación o
 						cumplimiento regulatorio. Las versiones vigentes estarán publicadas en este sitio.
@@ -58,7 +109,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 			<div class="mt-10 flex flex-wrap gap-3">
 				<a href="/" class="inline-flex h-11 items-center justify-center rounded-full border border-slate-300 px-5 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Volver al inicio</a>
-				<a href="/legal/privacy" class="inline-flex h-11 items-center justify-center rounded-full bg-[var(--supply-500)] px-5 text-sm font-semibold text-[var(--supply-950)] transition hover:bg-[var(--supply-400)]">Ver política de privacidad</a>
+				<a href="/legal/privacy" class="inline-flex h-11 items-center justify-center rounded-full bg-(--supply-500) px-5 text-sm text-white font-semibold transition hover:bg-(--supply-400)">Ver política de privacidad</a>
 			</div>
 		</div>
 	</main>

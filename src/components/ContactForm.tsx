@@ -3,6 +3,7 @@ import { useState, type FormEvent } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { APP_NAME, CONTACT_EMAIL } from "../lib/appConfig";
 
 type FormState = {
   name: string;
@@ -22,7 +23,7 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "ready">("idle");
-  const recipentEmail = "webmaster@facinnova.com";
+  const recipentEmail = CONTACT_EMAIL;
 
   function validate(values: FormState) {
     const nextErrors: Errors = {};
@@ -69,7 +70,7 @@ export default function ContactForm() {
     ].join("\n");
 
     window.location.href = `mailto:${recipentEmail}?subject=${encodeURIComponent(
-      "Contacto web Gasmovil",
+      `Contacto web ${APP_NAME}`,
     )}&body=${encodeURIComponent(body)}`;
   }
 

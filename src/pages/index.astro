@@ -16,12 +16,21 @@ import DataPrivacySection from '../components/DataPrivacySection.astro';
 import DualFeatureSection from '../components/DualFeatureSection.astro';
 import Footer from '../components/Footer.astro';
 import MockupSlider from '../components/MockupSlider';
+import AdBanner from '../components/AdBanner.astro';
 import Navbar from '../components/Navbar.astro';
 import ContactForm from '../components/ContactForm';
 import MainLayout from '../layouts/MainLayout.astro';
+import { playStoreUrl } from '../lib/appConfig';
 
 
-const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil';
+const sliderImages = [
+	'/assets/img/Stationary-portrait.png',
+	'/assets/img/cylinder-portrait.png',
+]
+
+const adSlotIDTop = '3473220690'
+const adSlotIDMiddle = '9847057350'
+const adSlotIDBottom = '5427498442'
 
 ---
 
@@ -29,7 +38,7 @@ const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinno
 	title="Gasmovil | Gas a domicilio en México"
 	description="Landing page oficial de Gasmovil, la app para pedir gas LP a domicilio, rastrear entregas en tiempo real y conectar clientes con proveedores en México."
 >
-	<Navbar playStoreUrl={playStoreUrl} />
+	<Navbar />
 
 	<main>
 		<section class="relative overflow-hidden px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24">
@@ -156,6 +165,16 @@ const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinno
 			</div>
 		</section>
 
+		<section class="px-4 sm:px-6 lg:px-8">
+			<AdBanner
+				adSlot={adSlotIDTop}
+				maxWidth="970px"
+				mobileMinHeight={100}
+				tabletMinHeight={120}
+				desktopMinHeight={250}
+			/>
+		</section>
+
 		<DualFeatureSection />
 
 		<section id="mockups" class="px-4 py-18 sm:px-6 lg:px-8">
@@ -181,11 +200,8 @@ const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinno
 							</div>
 						</div>
 						<MockupSlider
-							client:visible
-							images={[
-								'/assets/img/Stationary-portrait.png',
-								'/assets/img/cylinder-portrait.png',
-							]}
+							client:load
+							images={sliderImages}
 							altPrefix="Gasmovil mockup"
 						/>
 						
@@ -218,6 +234,16 @@ const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinno
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<section class="px-4 sm:px-6 lg:px-8">
+			<AdBanner
+				adSlot={adSlotIDMiddle}
+				maxWidth="1100px"
+				mobileMinHeight={120}
+				tabletMinHeight={180}
+				desktopMinHeight={280}
+			/>
 		</section>
 
 		<DataPrivacySection />
@@ -283,6 +309,16 @@ const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinno
 					<ContactForm client:load />
 				</div>
 			</div>
+		</section>
+
+		<section class="px-4 sm:px-6 lg:px-8">
+			<AdBanner
+				adSlot={adSlotIDBottom}
+				maxWidth="970px"
+				mobileMinHeight={90}
+				tabletMinHeight={120}
+				desktopMinHeight={250}
+			/>
 		</section>
 	</main>
 
