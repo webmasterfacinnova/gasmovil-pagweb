@@ -20,9 +20,8 @@ import AdBanner from '../components/AdBanner.astro';
 import Navbar from '../components/Navbar.astro';
 import ContactForm from '../components/ContactForm';
 import MainLayout from '../layouts/MainLayout.astro';
+import { playStoreUrl } from '../lib/appConfig';
 
-
-const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil';
 
 const sliderImages = [
 	'/assets/img/Stationary-portrait.png',
@@ -39,7 +38,7 @@ const adSlotIDBottom = '5427498442'
 	title="Gasmovil | Gas a domicilio en México"
 	description="Landing page oficial de Gasmovil, la app para pedir gas LP a domicilio, rastrear entregas en tiempo real y conectar clientes con proveedores en México."
 >
-	<Navbar playStoreUrl={playStoreUrl} />
+	<Navbar />
 
 	<main>
 		<section class="relative overflow-hidden px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24">

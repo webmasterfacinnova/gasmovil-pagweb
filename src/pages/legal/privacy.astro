@@ -1,16 +1,17 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import AdBanner from '../../components/AdBanner.astro';
+import { APP_NAME, COMPANY_NAME, CONTACT_EMAIL } from '../../lib/appConfig';
 
 const adSlotIDTop = '3473220690';
 
 const policy = {
 	lastUpdated: '16 de marzo de 2026',
-	companyName: 'Facinnovation',
-	applicationName: 'Gasmovil',
+	companyName: COMPANY_NAME,
+	applicationName: APP_NAME,
 	companyAddress: 'Av. San Blas, 2468. Tlaquepaque, Jalisco, Mexico. CP 45615.',
 	country: 'Mexico',
-	contactEmail: 'soporte@facinnova.com',
+	contactEmail: CONTACT_EMAIL,
 	minorAge: 16,
 	retentionMonths: 24,
 };
@@ -94,8 +95,8 @@ const adsPolicy = {
 ---
 
 <MainLayout
-	title="Politica de Privacidad | Gasmovil"
-	description="Politica de privacidad de Gasmovil para usuarios y proveedores en Mexico."
+	title={`Politica de Privacidad | ${APP_NAME}`}
+	description={`Politica de privacidad de ${APP_NAME} para usuarios y proveedores en Mexico.`}
 >
 	<main class="px-4 py-12 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-4xl rounded-4xl border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5 sm:p-10">
