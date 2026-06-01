@@ -1,8 +1,6 @@
 ---
-import { Download, Flame, Menu, ShieldCheck } from 'lucide-react';
+import { Download, Menu, ShieldCheck } from 'lucide-react';
 import { playStoreUrl } from '../lib/appConfig';
-
-
 
 ---
 
@@ -18,40 +16,40 @@ import { playStoreUrl } from '../lib/appConfig';
 			</a>
 
 			<nav class="ml-auto hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
-				<a class="transition hover:text-slate-950" href="#features">Features</a>
-				<a class="transition hover:text-slate-950" href="#eliminar-datos">Eliminar datos</a>
+				<a class="transition hover:text-slate-950" href="#top">Inicio</a>
+				<a class="transition hover:text-slate-950" href="#features">Soy cliente</a>
+				<a class="transition hover:text-slate-950" href="#mockups">Soy proveedor</a>
 				<a class="transition hover:text-slate-950" href="#contacto">Contacto</a>
 			</nav>
 
 			<div class="ml-auto hidden md:block">
-				<a
+<a
 					href={playStoreUrl}
 					target="_blank"
 					rel="noreferrer"
-					class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-slate-950 px-5 text-sm font-semibold text-white transition hover:bg-slate-800"
+					class="inline-flex h-11 items-center justify-center transition hover:opacity-80"
 				>
-					<Download className="h-4 w-4" />
-					Google Play
+					<img src="/assets/img/google-play.png" alt="Google Play" class="h-9 w-auto object-contain" />
 				</a>
 			</div>
 
-			<details class="ml-auto md:hidden">
-				<summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800">
+			<details class="ml-auto md:hidden" aria-haspopup="true">
+				<summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800" aria-label="Abrir menú">
 					<Menu className="h-5 w-5" />
 				</summary>
 				<div class="absolute inset-x-4 top-[calc(100%+0.75rem)] rounded-3xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-950/10">
 					<nav class="flex flex-col gap-4 text-sm font-medium text-slate-700">
-						<a href="#features">Features</a>
-						<a href="#eliminar-datos">Eliminar datos</a>
+						<a href="#top">Inicio</a>
+						<a href="#features">Soy cliente</a>
+						<a href="#mockups">Soy proveedor</a>
 						<a href="#contacto">Contacto</a>
-						<a
+<a
 							href={playStoreUrl}
 							target="_blank"
 							rel="noreferrer"
-							class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-slate-950 px-5 text-sm font-semibold text-white"
+							class="inline-flex h-11 items-center justify-center transition hover:opacity-80"
 						>
-							<Download className="h-4 w-4" />
-							Descargar app
+<img src="/assets/img/google-play.png" alt="Google Play" class="h-9 w-auto object-contain" />
 						</a>
 					</nav>
 					<div class="mt-4 flex items-center gap-3 rounded-2xl bg-slate-50 p-4 text-sm text-slate-600">
