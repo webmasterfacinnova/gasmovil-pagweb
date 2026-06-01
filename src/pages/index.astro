@@ -9,8 +9,8 @@ import {
 	MapPinned,
 	Navigation,
 	ShieldCheck,
-	Truck,
 	Users,
+	Watch,
 } from 'lucide-react';
 import DataPrivacySection from '../components/DataPrivacySection.astro';
 import DualFeatureSection from '../components/DualFeatureSection.astro';
@@ -21,7 +21,6 @@ import Navbar from '../components/Navbar.astro';
 import ContactForm from '../components/ContactForm';
 import MainLayout from '../layouts/MainLayout.astro';
 import { playStoreUrl } from '../lib/appConfig';
-
 
 const sliderImages = [
 	'/assets/img/Stationary-portrait.png',
@@ -45,11 +44,6 @@ const adSlotIDBottom = '5427498442'
 			<div class="absolute inset-0 -z-10 hero-mesh opacity-80"></div>
 			<div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
 				<div class="space-y-8">
-					<div class="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/75 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm shadow-slate-950/5 backdrop-blur">
-						<ShieldCheck className="h-4 w-4 text-[var(--client-500)]" />
-						<span>Plataforma confiable para clientes y proveedores de gas LP en México</span>
-					</div>
-
 					<div class="space-y-5">
 						<h1 class="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
 							Gas a domicilio con un clic
@@ -65,17 +59,10 @@ const adSlotIDBottom = '5427498442'
 							href={playStoreUrl}
 							target="_blank"
 							rel="noreferrer"
-							class="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-[var(--client-500)] px-8 text-base font-semibold text-white shadow-lg shadow-[var(--client-500)]/30 transition hover:bg-[var(--client-600)]"
+							class="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[var(--client-500)] to-[var(--client-600)] px-8 text-base font-bold text-white shadow-xl shadow-[var(--client-500)]/40 transition-all duration-300 hover:shadow-[var(--client-500)]/60 hover:scale-105"
 						>
 							<Download className="h-5 w-5" />
-							Descargar en Google Play
-						</a>
-						<a
-							href="#eliminar-datos"
-							class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/80 px-6 text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-white"
-						>
-							<ShieldCheck className="h-4 w-4 text-[var(--supply-600)]" />
-							Ver privacidad y eliminación de datos
+							¡Obtén acceso instantáneo!
 						</a>
 					</div>
 
@@ -85,27 +72,27 @@ const adSlotIDBottom = '5427498442'
 								<div class="rounded-2xl bg-[var(--client-50)] p-2 text-[var(--client-600)]">
 									<MapPinned className="h-5 w-5" />
 								</div>
-								<span class="text-sm font-semibold">Cobertura multiubicación</span>
+								<span class="text-sm font-semibold">Direcciones multiples</span>
 							</div>
 							<p class="mt-3 text-sm leading-6 text-slate-600">
-								Registra casa, negocio y puntos de entrega frecuentes desde una sola cuenta.
+								Registra tu casa o negocio desde una sola cuenta, sin necesidad de múltiples cuentas.
 							</p>
 						</div>
 						<div class="rounded-3xl border border-white/12 bg-white/80 p-4 shadow-lg shadow-slate-950/5 backdrop-blur">
 							<div class="flex items-center gap-3 text-slate-900">
 								<div class="rounded-2xl bg-[var(--supply-50)] p-2 text-[var(--supply-600)]">
-									<Truck className="h-5 w-5" />
+									<Navigation className="h-5 w-5" />
 								</div>
-								<span class="text-sm font-semibold">Orden y despacho</span>
+								<span class="text-sm font-semibold">Proveedor cercano</span>
 							</div>
 							<p class="mt-3 text-sm leading-6 text-slate-600">
-								El proveedor recibe la orden, confirma disponibilidad y sale con navegación activa.
+								Encuentra proveedores cercanos en el mapa, genera tu orden y el proveedor navega hasta tu dirección.
 							</p>
 						</div>
 						<div class="rounded-3xl border border-white/12 bg-white/80 p-4 shadow-lg shadow-slate-950/5 backdrop-blur">
 							<div class="flex items-center gap-3 text-slate-900">
 								<div class="rounded-2xl bg-slate-100 p-2 text-slate-700">
-									<Clock3 className="h-5 w-5" />
+									<Watch className="h-5 w-5" />
 								</div>
 								<span class="text-sm font-semibold">Seguimiento en tiempo real</span>
 							</div>
@@ -139,10 +126,10 @@ const adSlotIDBottom = '5427498442'
 							<div class="rounded-3xl border border-[var(--supply-200)] bg-[var(--supply-50)]/80 p-5 shadow-lg shadow-[var(--supply-950)]/5">
 								<div class="flex items-center gap-3 text-[var(--supply-800)]">
 									<BadgeDollarSign className="h-5 w-5" />
-									<span class="text-sm font-semibold">Precio visible por litro</span>
-								</div>
+									<span class="text-sm font-semibold">Precios y cobertura siempre al día</span>
+																															</div>
 								<p class="mt-3 text-sm leading-6 text-[var(--supply-900)]/70">
-									El proveedor actualiza tarifas y zonas de atención sin fricción operativa.
+									Cada operador mantiene sus tarifas actualizadas al instante. Siempre sabes qué compañía te surte y cuánto pagas por litro.
 								</p>
 							</div>
 						</div>
@@ -155,15 +142,7 @@ const adSlotIDBottom = '5427498442'
 			</div>
 		</section>
 
-		<section class="px-4 pb-12 sm:px-6 lg:px-8">
-			<div class="mx-auto flex max-w-6xl items-center justify-center gap-4 rounded-full border border-white/10 bg-white/70 px-6 py-4 shadow-lg shadow-slate-950/5 backdrop-blur">
-				<img src="/assets/img/icon.png" alt="Logo de Gasmovil" class="h-10 w-10 rounded-2xl object-cover" />
-				<div class="text-center">
-					<p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">Gasmovil</p>
-					<p class="text-sm text-slate-600">Tecnología para hacer más clara y rápida la entrega de gas LP.</p>
-				</div>
-			</div>
-		</section>
+
 
 		<section class="px-4 sm:px-6 lg:px-8">
 			<AdBanner
@@ -278,7 +257,7 @@ const adSlotIDBottom = '5427498442'
 					<div class="rounded-[2rem] border border-[var(--supply-200)] bg-[var(--supply-50)] p-6 shadow-lg shadow-[var(--supply-950)]/5">
 						<Navigation className="h-8 w-8 text-[var(--supply-700)]" />
 						<p class="mt-6 text-3xl font-semibold text-slate-950">Ruta útil</p>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Menos fricción operativa y mejor llegada al domicilio correcto.</p>
+						<p class="mt-2 text-sm leading-6 text-slate-600">Rutas optimizadas para que el gas llegue rápido al domicilio correcto.</p>
 					</div>
 				</div>
 			</div>
