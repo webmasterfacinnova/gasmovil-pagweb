@@ -2,15 +2,15 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-type MockupSliderProps = {
+type ScreenshotSliderProps = {
   images: string[];
   altPrefix?: string;
 };
 
-export default function MockupSlider({
+export default function ScreenshotSlider({
   images,
-  altPrefix = "Gasmovil mockup",
-}: MockupSliderProps) {
+  altPrefix = "Gasmovil captura",
+}: ScreenshotSliderProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0); // -1 para izquierda, 1 para derecha
   const pointerStartX = useRef<number | null>(null);
@@ -68,7 +68,7 @@ export default function MockupSlider({
         onPointerDown={handlePointerDown}
         onPointerUp={handlePointerUp}
         onPointerCancel={() => (pointerStartX.current = null)}
-        style={{ aspectRatio: "9/16" }} // Ajusta según el formato de tus mockups
+        style={{ aspectRatio: "9/16" }} // Ajusta según el formato de tus imágenes
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.img
