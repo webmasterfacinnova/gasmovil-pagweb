@@ -145,7 +145,7 @@ const adSlotIDBottom = '5427498442'
 
 		<DualFeatureSection />
 
-		<section id="mockups" class="px-4 py-12 sm:px-6 lg:px-8">
+		<section id="mockups" class="px-4 pt-12 pb-4 sm:px-6 lg:px-8">
 			<div class="mx-auto max-w-7xl">
 				<div class="max-w-3xl">
 					<p class="section-kicker">Interfaz de la app</p>
@@ -204,7 +204,7 @@ const adSlotIDBottom = '5427498442'
 			</div>
 		</section>
 
-		<section class="px-4 sm:px-6 lg:px-8">
+		<section class="px-4 mt-2 mb-2 sm:px-6 lg:px-8">
 			<AdBanner
 				adSlot={adSlotIDMiddle}
 				maxWidth="1100px"
@@ -214,44 +214,47 @@ const adSlotIDBottom = '5427498442'
 			/>
 		</section>
 
-		<section id="nosotros" class="px-4 pt-2 pb-12 sm:px-6 lg:px-8">
-			<div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-				<div class="rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5">
-					<p class="section-kicker">Sobre nosotros</p>
-					<h2 class="section-title text-3xl">Una solución nacida para facilitar el abasto de gas en México</h2>
-					<p class="mt-4 text-base leading-8 text-slate-600">
-						Gasmovil surge de una necesidad cotidiana: coordinar entregas de gas con más claridad,
-						menos llamadas y una mejor experiencia tanto para el hogar como para la operación del
-						proveedor.
-					</p>
-					<p class="mt-4 text-base leading-8 text-slate-600">
-						Nuestro enfoque combina visibilidad operativa, confianza y una interfaz sencilla para que
-						cada entrega se sienta profesional desde el primer toque en pantalla.
-					</p>
+		<section id="nosotros" class="px-4 pt-2 pb-4 sm:px-6 lg:px-8">
+			<div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+				<div class="relative rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5 overflow-hidden">
+					<div class="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[var(--client-100)]/50 blur-3xl"></div>
+					<div class="relative">
+						<p class="section-kicker">Por qué Gasmovil</p>
+						<h2 class="section-title text-3xl">Hicimos que pedir gas sea tan simple como debería ser</h2>
+						<p class="mt-4 text-base leading-8 text-slate-600">
+							En México pedir gas solía significar llamar, esperar sin información y cruzar los dedos.
+							Gasmovil cambia eso: conectamos hogares y negocios con distribuidores verificados,
+							con precios visibles y seguimiento en tiempo real, sin llamadas ni incertidumbre.
+						</p>
+						<p class="mt-4 text-base leading-8 text-slate-600">
+							Una plataforma pensada para que cada entrega sea clara, puntual y profesional —
+							tanto para quien recibe como para quien reparte.
+						</p>
+					</div>
 				</div>
 
 				<div class="grid gap-4 sm:grid-cols-3">
-					<div class="rounded-[2rem] border border-slate-200/80 bg-slate-950 p-6 text-white shadow-xl shadow-slate-950/15">
+					<div class="rounded-[2rem] border border-slate-200/80 bg-slate-950 p-6 text-white shadow-xl shadow-slate-950/15 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-950/25">
 						<Users className="h-8 w-8 text-[var(--client-300)]" />
-						<p class="mt-6 text-3xl font-semibold">2 roles</p>
-						<p class="mt-2 text-sm leading-6 text-slate-300">Experiencia diferenciada para clientes y proveedores.</p>
+						<p class="mt-6 text-3xl font-semibold">2 en 1</p>
+						<p class="mt-2 text-sm leading-6 text-slate-300">Cliente y proveedor en una misma app. Cada quien ve lo que necesita, sin ruido.</p>
 					</div>
-					<div class="rounded-[2rem] border border-[var(--client-200)] bg-[var(--client-50)] p-6 shadow-lg shadow-[var(--client-950)]/5">
+					<div class="rounded-[2rem] border border-[var(--client-200)] bg-[var(--client-50)] p-6 shadow-lg shadow-[var(--client-950)]/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[var(--client-950)]/10">
 						<Flame className="h-8 w-8 text-[var(--client-600)]" />
-						<p class="mt-6 text-3xl font-semibold text-slate-950">LP claro</p>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Tipo de gas, ubicación y entrega visibles en un solo flujo.</p>
+						<p class="mt-6 text-3xl font-semibold text-slate-950">Sin sorpresas</p>
+						<p class="mt-2 text-sm leading-6 text-slate-600">Tipo de gas, precio y hora de llegada visibles antes de confirmar. Cero llamadas.</p>
 					</div>
-					<div class="rounded-[2rem] border border-[var(--supply-200)] bg-[var(--supply-50)] p-6 shadow-lg shadow-[var(--supply-950)]/5">
+					<div class="rounded-[2rem] border border-[var(--supply-200)] bg-[var(--supply-50)] p-6 shadow-lg shadow-[var(--supply-950)]/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[var(--supply-950)]/10">
 						<Navigation className="h-8 w-8 text-[var(--supply-700)]" />
-						<p class="mt-6 text-3xl font-semibold text-slate-950">Ruta útil</p>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Rutas optimizadas para que el gas llegue rápido al domicilio correcto.</p>
+						<p class="mt-6 text-3xl font-semibold text-slate-950">Entrega exprés</p>
+						<p class="mt-2 text-sm leading-6 text-slate-600">Rutas optimizadas que llevan el gas a tu puerta más rápido, con seguimiento en vivo.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="contacto" class="px-4 pt-4 pb-12 sm:px-6 lg:px-8">
-			<div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr]">
+		<section id="contacto" class="px-4 pt-4 pb-4 sm:px-6 lg:px-8">
+			<div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.82fr_1.18fr]">
 				<div class="space-y-5 rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5">
 					<p class="section-kicker">Contacto</p>
 					<h2 class="section-title text-3xl">Hablemos sobre adopción, soporte o distribución</h2>
@@ -277,7 +280,7 @@ const adSlotIDBottom = '5427498442'
 			</div>
 		</section>
 
-		<section class="px-4 sm:px-6 lg:px-8">
+		<section class="px-4 mt-2 mb-0 sm:px-6 lg:px-8">
 			<AdBanner
 				adSlot={adSlotIDBottom}
 				maxWidth="970px"
