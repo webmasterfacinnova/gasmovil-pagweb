@@ -1,6 +1,6 @@
-export const APP_NAME = "Gasmovil";
-export const COMPANY_NAME = "Facinnovation";
-export const CONTACT_EMAIL = "soporte@facinnova.com";
+export const APP_NAME = "Zerkio";
+export const COMPANY_NAME = "Facinnovations";
+export const CONTACT_EMAIL = "informacion@facinnova.com";
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
 export const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil";
