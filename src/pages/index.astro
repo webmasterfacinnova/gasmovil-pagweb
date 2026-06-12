@@ -29,12 +29,13 @@ const sliderImages = [
 
 const adSlotIDMiddle = '9847057350'
 const adSlotIDBottom = '5427498442'
+import {APP_NAME} from '../lib/appConfig';
 
 ---
 
 <MainLayout
-	title="Gasmovil | Gas a domicilio en México"
-	description="Landing page oficial de Gasmovil, la app para pedir gas LP a domicilio, rastrear entregas en tiempo real y conectar clientes con proveedores en México."
+	title=`${APP_NAME} | Gas a domicilio en México`
+	description=`Landing page oficial de ${APP_NAME}, la app para pedir gas LP a domicilio, rastrear entregas en tiempo real y conectar clientes con proveedores en México.`
 >
 	<Navbar />
 
@@ -48,8 +49,8 @@ const adSlotIDBottom = '5427498442'
 							Gas a domicilio con un clic
 						</h1>
 						<p class="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-							Gasmovil simplifica la compra de gas en zonas urbanas y residenciales, conectando a
-							usuarios con distribuidores verificados, rutas activas y tiempos de entrega más claros.
+							{`${APP_NAME} simplifica la compra de gas en zonas urbanas y residenciales, conectando a
+							usuarios con distribuidores verificados, rutas activas y tiempos de entrega más claros.`}
 						</p>
 					</div>
 
@@ -133,7 +134,7 @@ const adSlotIDBottom = '5427498442'
 							</div>
 						</div>
 						<div class="order-1 md:order-2">
-							<img src="/assets/img/map-portrait.png" alt="Gasmovil captura" class="object-cover" />
+							<img src="/assets/img/map-portrait.png" alt=`${APP_NAME} captura` class="object-cover" />
 							
 						</div>
 					</div>
@@ -170,7 +171,7 @@ const adSlotIDBottom = '5427498442'
 						<ScreenshotSlider
 							client:load
 							images={sliderImages}
-							altPrefix="Gasmovil captura"
+							altPrefix=`${APP_NAME} captura`
 						/>
 						
 					</div>
@@ -185,7 +186,7 @@ const adSlotIDBottom = '5427498442'
 								Live
 							</div>
 						</div>
-						<img src="/assets/img/ETA2-portrait.png" alt="Gasmovil captura" class="object-cover" />
+						<img src="/assets/img/ETA2-portrait.png" alt=`${APP_NAME} captura` class="object-cover" />
 					</div>
 
 					<div class="space-y-4 rounded-[2rem] border border-slate-200/80 bg-white p-6 shadow-lg shadow-slate-950/5">
@@ -198,33 +199,25 @@ const adSlotIDBottom = '5427498442'
 								Proveedor
 							</div>
 						</div>
-						<img src="/assets/img/driver-portrait.png" alt="Gasmovil captura" class="object-cover" />
+						<img src="/assets/img/driver-portrait.png" alt=`${APP_NAME} captura` class="object-cover" />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="px-4 mt-2 mb-2 sm:px-6 lg:px-8">
-			<AdBanner
-				adSlot={adSlotIDMiddle}
-				maxWidth="1100px"
-				mobileMinHeight={120}
-				tabletMinHeight={180}
-				desktopMinHeight={280}
-			/>
-		</section>
+		
 
 		<section id="nosotros" class="px-4 pt-2 pb-4 sm:px-6 lg:px-8">
 			<div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
 				<div class="relative rounded-[2rem] border border-slate-200/80 bg-white p-8 shadow-lg shadow-slate-950/5 overflow-hidden">
 					<div class="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[var(--client-100)]/50 blur-3xl"></div>
 					<div class="relative">
-						<p class="section-kicker">Por qué Gasmovil</p>
+						<p class="section-kicker">{`Por qué ${APP_NAME}`}</p>
 						<h2 class="section-title text-3xl">Hicimos que pedir gas sea tan simple como debería ser</h2>
 						<p class="mt-4 text-base leading-8 text-slate-600">
-							En México pedir gas solía significar llamar, esperar sin información y cruzar los dedos.
-							Gasmovil cambia eso: conectamos hogares y negocios con distribuidores verificados,
-							con precios visibles y seguimiento en tiempo real, sin llamadas ni incertidumbre.
+							{`En México pedir gas solía significar llamar, esperar sin información y cruzar los dedos.
+							${APP_NAME} cambia eso: conectamos hogares y negocios con distribuidores verificados,
+							con precios visibles y seguimiento en tiempo real, sin llamadas ni incertidumbre.`}
 						</p>
 						<p class="mt-4 text-base leading-8 text-slate-600">
 							Una plataforma pensada para que cada entrega sea clara, puntual y profesional —
@@ -280,15 +273,7 @@ const adSlotIDBottom = '5427498442'
 			</div>
 		</section>
 
-		<section class="px-4 mt-0 mb-0 sm:px-6 lg:px-8">
-			<AdBanner
-				adSlot={adSlotIDBottom}
-				maxWidth="970px"
-				mobileMinHeight={90}
-				tabletMinHeight={120}
-				desktopMinHeight={250}
-			/>
-		</section>
+		
 	</main>
 
 	<Footer />

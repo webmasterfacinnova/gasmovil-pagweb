@@ -22,11 +22,18 @@ const socialLinks = [
 <footer class="px-4 pb-10 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-7xl rounded-4xl border border-slate-200/80 bg-white px-6 py-8 shadow-lg shadow-slate-950/5 sm:px-8">
 		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-			<div class="flex items-center gap-4">
-				<img src="/assets/img/icon.png" alt={`Logo ${APP_NAME}`} class="h-12 w-12 rounded-2xl object-cover" />
+			<div class="flex flex-col gap-4">
+				<div class="flex items-center gap-4">
+					<img src="/assets/img/icon.png" alt={`Logo ${APP_NAME}`} class="h-12 w-12 rounded-2xl object-cover" />
+					<div>
+						<p class="text-base font-semibold text-slate-950">{APP_NAME}</p>
+						<p class="text-sm text-slate-500">Gas a domicilio con mejor visibilidad para México.</p>
+					</div>
+				</div>
 				<div>
-					<p class="text-base font-semibold text-slate-950">{APP_NAME}</p>
-					<p class="text-sm text-slate-500">Gas a domicilio con mejor visibilidad para México.</p>
+					<p class="text-sm text-slate-500">
+						Mockups de dispositivos provistos por <a href="https://mockuphone.com/" target="_blank" class="text-md font-extrabold text-[var(--client-800)]" >MockUPhone</a>.
+					</p>
 				</div>
 			</div>
 

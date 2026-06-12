@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://gasmovil.app",
+  site: "https://zerkio.com",
   integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
