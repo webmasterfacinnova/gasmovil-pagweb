@@ -1,6 +1,6 @@
 ---
 import { Download, Menu, ShieldCheck } from 'lucide-react';
-import { playStoreUrl } from '../lib/appConfig';
+import { APP_NAME, playStoreUrl } from '../lib/appConfig';
 
 ---
 
@@ -8,9 +8,9 @@ import { playStoreUrl } from '../lib/appConfig';
 	<div class="mx-auto max-w-7xl rounded-full border border-white/15 bg-white/75 px-5 py-3 shadow-lg shadow-slate-950/5 backdrop-blur">
 		<div class="flex items-center gap-4">
 			<a href="#top" class="flex items-center gap-3">
-				<img src="/assets/img/icon.png" alt="Logo Gasmovil" class="h-11 w-11 rounded-2xl object-cover" />
+				<img src="/assets/img/icon.png" alt=`Logo ${APP_NAME}` class="h-11 w-11 rounded-2xl object-cover" />
 				<div>
-					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-400">Gasmovil</p>
+					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-400">{APP_NAME}</p>
 					<p class="text-sm text-slate-600">Cliente y proveedor en la misma ruta</p>
 				</div>
 			</a>

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { APP_NAME } from "../lib/appConfig";
 
 type ScreenshotSliderProps = {
   images: string[];
@@ -9,7 +10,7 @@ type ScreenshotSliderProps = {
 
 export default function ScreenshotSlider({
   images,
-  altPrefix = "Gasmovil captura",
+  altPrefix = `${APP_NAME} captura`,
 }: ScreenshotSliderProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0); // -1 para izquierda, 1 para derecha
