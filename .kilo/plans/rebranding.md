@@ -1,7 +1,7 @@
-# Plan de Rebranding: GasMobile a Zerkio
+# Plan de Rebranding: GasMovil a Zerkio
 
 ## Objetivo
-Realizar rebranding completo de GasMobile a Zerkio, incluyendo cambio de nombre, logo y paleta de colores basada en el nuevo logo.
+Realizar rebranding completo de GasMovil a Zerkio, incluyendo cambio de nombre, logo y paleta de colores basada en el nuevo logo.
 
 ## Hallazgos Iniciales
 - Archivo de estilos principal en `public/assets/css/style.css`
@@ -28,7 +28,7 @@ Dado que no se puede acceder al contenido visual del logo, se procederá con el 
 - Ajustar cualquier otro color relacionado según la nueva paleta
 
 ### 3. Cambio de Nombres y Textos
-- Buscar y reemplazar todas las instancias de "GasMobile" por "Zerkio" en todos los archivos del proyecto
+- Buscar y reemplazar todas las instancias de "GasMovil" por "Zerkio" en todos los archivos del proyecto
 - Actualizar referencias en archivos de configuración, metadatos y código
 
 ### 4. Reemplazo del Logo

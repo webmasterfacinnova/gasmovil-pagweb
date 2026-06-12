@@ -5,25 +5,25 @@ import { playStoreUrl } from '../lib/appConfig';
 ---
 
 <header class="sticky top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-	<div class="mx-auto max-w-7xl rounded-full border border-white/15 bg-white/75 px-5 py-3 shadow-lg shadow-slate-950/5 backdrop-blur">
+	<div class="glass-panel mx-auto max-w-7xl rounded-full px-5 py-3">
 		<div class="flex items-center gap-4">
 			<a href="#top" class="flex items-center gap-3">
 				<img src="/assets/img/icon.png" alt="Logo Gasmovil" class="h-11 w-11 rounded-2xl object-cover" />
 				<div>
-					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-400">Gasmovil</p>
-					<p class="text-sm text-slate-600">Cliente y proveedor en la misma ruta</p>
+					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--client-400)]">Gasmovil</p>
+					<p class="text-sm text-slate-400">Cliente y proveedor en la misma ruta</p>
 				</div>
 			</a>
 
-			<nav class="ml-auto hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
-				<a class="transition hover:text-slate-950" href="#top">Inicio</a>
-				<a class="transition hover:text-slate-950" href="#features">Soy cliente</a>
-				<a class="transition hover:text-slate-950" href="#mockups">Soy proveedor</a>
-				<a class="transition hover:text-slate-950" href="#contacto">Contacto</a>
+			<nav class="ml-auto hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+				<a class="transition hover:text-white" href="#top">Inicio</a>
+				<a class="transition hover:text-white" href="#features">Soy cliente</a>
+				<a class="transition hover:text-white" href="#mockups">Soy proveedor</a>
+				<a class="transition hover:text-white" href="#contacto">Contacto</a>
 			</nav>
 
 			<div class="ml-auto hidden md:block">
-<a
+				<a
 					href={playStoreUrl}
 					target="_blank"
 					rel="noreferrer"
@@ -34,22 +34,22 @@ import { playStoreUrl } from '../lib/appConfig';
 			</div>
 
 			<details class="ml-auto md:hidden" aria-haspopup="true">
-				<summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800" aria-label="Abrir menú">
+				<summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-white/20 bg-white/10 text-white" aria-label="Abrir menú">
 					<Menu className="h-5 w-5" />
 				</summary>
-				<div class="absolute inset-x-4 top-[calc(100%+0.75rem)] rounded-3xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-950/10">
-					<nav class="flex flex-col gap-4 text-sm font-medium text-slate-700">
-						<a href="#top">Inicio</a>
-						<a href="#features">Soy cliente</a>
-						<a href="#mockups">Soy proveedor</a>
-						<a href="#contacto">Contacto</a>
-<a
+				<div class="glass-panel absolute inset-x-4 top-[calc(100%+0.75rem)] rounded-3xl border border-white/20 p-5">
+					<nav class="flex flex-col gap-4 text-sm font-medium text-slate-200">
+						<a href="#top" class="transition hover:text-white">Inicio</a>
+						<a href="#features" class="transition hover:text-white">Soy cliente</a>
+						<a href="#mockups" class="transition hover:text-white">Soy proveedor</a>
+						<a href="#contacto" class="transition hover:text-white">Contacto</a>
+						<a
 							href={playStoreUrl}
 							target="_blank"
 							rel="noreferrer"
 							class="inline-flex h-11 items-center justify-center transition hover:opacity-80"
 						>
-<img src="/assets/img/google-play.png" alt="Google Play" class="h-12 w-auto object-contain" />
+							<img src="/assets/img/google-play.png" alt="Google Play" class="h-12 w-auto object-contain" />
 						</a>
 					</nav>
 				</div>

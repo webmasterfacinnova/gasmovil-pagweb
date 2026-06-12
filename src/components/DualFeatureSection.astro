@@ -15,73 +15,75 @@ import { BadgeDollarSign, Flame, LocateFixed, MapPinned, Navigation, Route, Truc
 		</div>
 
 		<div class="mt-10 grid gap-6 xl:grid-cols-2">
-			<article class="overflow-hidden rounded-[2rem] border border-[var(--client-200)] bg-white shadow-xl shadow-[var(--client-950)]/5">
-				<div class="border-b border-[var(--client-100)] bg-[linear-gradient(135deg,var(--client-50),white)] p-8">
+			<!-- Client Card -->
+			<article class="glass-panel overflow-hidden rounded-[2rem] border border-[var(--client-500)]/30">
+				<div class="border-b border-[var(--client-500)]/20 bg-gradient-to-br from-[var(--client-950)]/50 to-transparent p-8">
 					<div class="flex items-center gap-3">
-						<div class="rounded-2xl bg-[var(--client-500)] p-3 text-white">
+						<div class="rounded-2xl bg-gradient-to-br from-[var(--client-500)] to-[var(--client-700)] p-3 text-white shadow-lg shadow-[var(--client-500)]/25">
 							<Flame className="h-6 w-6" />
 						</div>
 						<div>
-							<p class="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--client-700)]">Modo cliente</p>
-							<h3 class="mt-1 text-3xl font-semibold text-slate-950">Compra de gas con visibilidad y menos fricción</h3>
+							<p class="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--client-400)]">Modo cliente</p>
+							<h3 class="mt-1 text-3xl font-semibold text-white">Compra de gas con visibilidad y menos fricción</h3>
 						</div>
 					</div>
-					<p class="mt-5 max-w-2xl text-base leading-8 text-slate-600">
+					<p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">
 						Pensado para hogares y negocios que necesitan pedir gas con rapidez, confirmar el tipo de
 						servicio correcto y seguir la ruta del camión sin depender de llamadas adicionales.
 					</p>
 				</div>
 
 				<div class="grid gap-5 p-8 md:grid-cols-3">
-					<div class="rounded-3xl bg-[var(--client-50)] p-5">
-						<MapPinned className="h-6 w-6 text-[var(--client-600)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Múltiples direcciones</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Guarda casa, trabajo o puntos frecuentes y elige el destino correcto en segundos.</p>
+					<div class="rounded-2xl bg-[var(--client-950)]/30 border border-[var(--client-500)]/20 p-5">
+						<MapPinned className="h-6 w-6 text-[var(--client-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Múltiples direcciones</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Guarda casa, trabajo o puntos frecuentes y elige el destino correcto en segundos.</p>
 					</div>
-					<div class="rounded-3xl bg-[var(--client-50)] p-5">
-						<LocateFixed className="h-6 w-6 text-[var(--client-600)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Tipo de gas claro</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Selecciona servicio para cilindro o tanque estacionario desde una interfaz directa.</p>
+					<div class="rounded-2xl bg-[var(--client-950)]/30 border border-[var(--client-500)]/20 p-5">
+						<LocateFixed className="h-6 w-6 text-[var(--client-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Tipo de gas claro</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Selecciona servicio para cilindro o tanque estacionario desde una interfaz directa.</p>
 					</div>
-					<div class="rounded-3xl bg-[var(--client-50)] p-5">
-						<Route className="h-6 w-6 text-[var(--client-600)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Rastreo en vivo</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Sigue la ruta en tiempo real y entiende mejor el avance de la entrega.</p>
+					<div class="rounded-2xl bg-[var(--client-950)]/30 border border-[var(--client-500)]/20 p-5">
+						<Route className="h-6 w-6 text-[var(--client-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Rastreo en vivo</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Sigue la ruta en tiempo real y entiende mejor el avance de la entrega.</p>
 					</div>
 				</div>
 			</article>
 
-			<article class="overflow-hidden rounded-[2rem] border border-[var(--supply-200)] bg-white shadow-xl shadow-[var(--supply-950)]/5">
-				<div class="border-b border-[var(--supply-100)] bg-[linear-gradient(135deg,var(--supply-50),white)] p-8">
+			<!-- Supplier Card -->
+			<article class="glass-panel overflow-hidden rounded-[2rem] border border-[var(--supply-500)]/30">
+				<div class="border-b border-[var(--supply-500)]/20 bg-gradient-to-br from-[var(--supply-950)]/50 to-transparent p-8">
 					<div class="flex items-center gap-3">
-						<div class="rounded-2xl bg-[var(--supply-500)] p-3 text-[var(--supply-950)] text-white">
+						<div class="rounded-2xl bg-gradient-to-br from-[var(--supply-500)] to-[var(--supply-700)] p-3 text-white shadow-lg shadow-[var(--supply-500)]/25">
 							<Truck className="h-6 w-6" />
 						</div>
 						<div>
-							<p class="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--supply-700)]">Modo proveedor</p>
-							<h3 class="mt-1 text-3xl font-semibold text-slate-950">Operación más visible para precios, órdenes y ruta</h3>
+							<p class="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--supply-400)]">Modo proveedor</p>
+							<h3 class="mt-1 text-3xl font-semibold text-white">Operación más visible para precios, órdenes y ruta</h3>
 						</div>
 					</div>
-					<p class="mt-5 max-w-2xl text-base leading-8 text-slate-600">
+					<p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">
 						Pensado para distribuidores que necesitan publicar sus tarifas por litro, recibir pedidos con los datos del cliente y navegar directo al punto de entrega.
 					</p>
 				</div>
 
 				<div class="grid gap-5 p-8 md:grid-cols-3">
-					<div class="rounded-3xl bg-[var(--supply-50)] p-5">
-						<BadgeDollarSign className="h-6 w-6 text-[var(--supply-700)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Precio por litro</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Ajusta tarifas de forma visible para dar claridad comercial al usuario final.</p>
+					<div class="rounded-2xl bg-[var(--supply-950)]/30 border border-[var(--supply-500)]/20 p-5">
+						<BadgeDollarSign className="h-6 w-6 text-[var(--supply-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Precio por litro</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Ajusta tarifas de forma visible para dar claridad comercial al usuario final.</p>
 					</div>
-					<div class="rounded-3xl bg-[var(--supply-50)] p-5">
-						<MapPinned className="h-6 w-6 text-[var(--supply-700)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Recepción de órdenes</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Visualiza pedido, volumen y ubicación antes de confirmar el servicio.</p>
+					<div class="rounded-2xl bg-[var(--supply-950)]/30 border border-[var(--supply-500)]/20 p-5">
+						<MapPinned className="h-6 w-6 text-[var(--supply-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Recepción de órdenes</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Visualiza pedido, volumen y ubicación antes de confirmar el servicio.</p>
 					</div>
-					<div class="rounded-3xl bg-[var(--supply-50)] p-5">
-						<Navigation className="h-6 w-6 text-[var(--supply-700)]" />
-						<h4 class="mt-4 text-lg font-semibold text-slate-950">Navegación GPS</h4>
-						<p class="mt-2 text-sm leading-6 text-slate-600">Abre la ruta al cliente y reduce errores al llegar al punto de entrega.</p>
+					<div class="rounded-2xl bg-[var(--supply-950)]/30 border border-[var(--supply-500)]/20 p-5">
+						<Navigation className="h-6 w-6 text-[var(--supply-400)]" />
+						<h4 class="mt-4 text-lg font-semibold text-white">Navegación GPS</h4>
+						<p class="mt-2 text-sm leading-6 text-slate-400">Abre la ruta al cliente y reduce errores al llegar al punto de entrega.</p>
 					</div>
 				</div>
 			</article>
