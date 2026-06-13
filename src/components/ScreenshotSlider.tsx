@@ -9,7 +9,7 @@ type ScreenshotSliderProps = {
 
 export default function ScreenshotSlider({
   images,
-  altPrefix = "Gasmovil captura",
+  altPrefix = "Zerkio captura",
 }: ScreenshotSliderProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0); // -1 para izquierda, 1 para derecha

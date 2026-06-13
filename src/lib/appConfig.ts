@@ -1,4 +1,4 @@
-export const APP_NAME = "Gasmovil";
+export const APP_NAME = "Zerkio";
 export const COMPANY_NAME = "Facinnovation";
 export const CONTACT_EMAIL = "soporte@facinnova.com";
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;

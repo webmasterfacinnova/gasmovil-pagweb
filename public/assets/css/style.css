@@ -1,6 +1,6 @@
-/* Base colors coming from the GasMobile logo */
+/* Base colors coming from the Zerkio logo */
 :root {
-    --primary-color: #f57c00; /* naranja GasMobile */
+    --primary-color: #b21318; /* rojo Zerkio */
     --secondary-color: #333333;
     --light-color: #f5f5f5;
 }
@@ -94,7 +94,7 @@ button {
 }
 
 button:hover {
-    background-color: #db6e00;
+    background-color: #8a0f12;
 }
 footer {
     text-align: center;
