@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from '../../layouts/Layout.astro';
 import AdBanner from '../../components/AdBanner.astro';
 import { APP_NAME, COMPANY_NAME, CONTACT_EMAIL } from '../../lib/appConfig';
 
@@ -154,13 +154,7 @@ const adsPolicy = {
 					</ul>
 				</section>
 
-				<AdBanner
-					adSlot={adSlotIDTop}
-					maxWidth="728px"
-					mobileMinHeight={90}
-					tabletMinHeight={120}
-					desktopMinHeight={180}
-				/>
+				
 
 				<section>
 					<h2 class="text-2xl font-semibold text-slate-950">2. Recopilacion y uso de tus Datos Personales</h2>

@@ -2,6 +2,8 @@ export const APP_NAME = "Zerkio";
 export const COMPANY_NAME = "Facinnovations";
 export const CONTACT_EMAIL = "informacion@facinnova.com";
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
+export const ADDRESS = "Guadalajara, México";
+export const PHONE = "+52 3344849378";
 export const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil";
 
