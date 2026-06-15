@@ -99,7 +99,7 @@
   /* Glass morphism panels */
   .glass-panel {
     @apply border border-white/10 bg-white/5 backdrop-blur-xl;
-    box-shadow: 
+    box-shadow:
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
@@ -107,17 +107,29 @@
 
   .glass-panel-strong {
     @apply border border-white/15 bg-white/10 backdrop-blur-2xl;
-    box-shadow: 
+    box-shadow:
       0 25px 50px -12px rgba(0, 0, 0, 0.25),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   }
 
   /* Animated gradient background */
   .hero-gradient {
-    background: 
-      radial-gradient(ellipse 80% 50% at 20% 40%, rgba(255, 46, 46, 0.15), transparent),
-      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(245, 158, 11, 0.12), transparent),
-      radial-gradient(ellipse 50% 30% at 50% 80%, rgba(100, 116, 139, 0.08), transparent),
+    background:
+      radial-gradient(
+        ellipse 80% 50% at 20% 40%,
+        rgba(255, 46, 46, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 20%,
+        rgba(245, 158, 11, 0.12),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 30% at 50% 80%,
+        rgba(100, 116, 139, 0.08),
+        transparent
+      ),
       linear-gradient(180deg, var(--surface-0) 0%, var(--surface-1) 100%);
   }
 
@@ -134,13 +146,13 @@
 
   /* Glow effects */
   .glow-red {
-    box-shadow: 
+    box-shadow:
       0 0 60px -15px rgba(255, 46, 46, 0.4),
       0 0 100px -30px rgba(255, 46, 46, 0.2);
   }
 
   .glow-amber {
-    box-shadow: 
+    box-shadow:
       0 0 60px -15px rgba(245, 158, 11, 0.4),
       0 0 100px -30px rgba(245, 158, 11, 0.2);
   }
@@ -149,23 +161,44 @@
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-bold text-white transition-all duration-300;
     background: linear-gradient(135deg, var(--client-500), var(--client-600));
-    box-shadow: 
+    box-shadow:
       0 10px 40px -10px rgba(255, 46, 46, 0.5),
       0 4px 0 0 var(--client-700);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
       0 20px 50px -10px rgba(255, 46, 46, 0.6),
       0 6px 0 0 var(--client-700);
   }
 
   .btn-primary:active {
     transform: translateY(0);
-    box-shadow: 
+    box-shadow:
       0 5px 20px -5px rgba(255, 46, 46, 0.4),
       0 2px 0 0 var(--client-700);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10;
+    box-shadow:
+      0 4px 6px -1px rgba(255, 255, 255, 0.1),
+      0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 6px 8px -1px rgba(255, 255, 255, 0.15),
+      0 4px 6px -1px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-secondary:active {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 2px 4px -1px rgba(255, 255, 255, 0.1),
+      0 1px 2px -1px rgba(255, 255, 255, 0.05);
   }
 
   /* Card hover effects */
@@ -196,7 +229,12 @@
   /* Section dividers */
   .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
   }
 
   /* Animated border gradient */
@@ -212,12 +250,16 @@
     inset: 0;
     border-radius: 1.5rem;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
-    mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    mask:
+      linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -228,8 +270,9 @@
   .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+      opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .reveal.visible {
@@ -237,10 +280,18 @@
     transform: translateY(0);
   }
 
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-1 {
+    transition-delay: 0.1s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.2s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.3s;
+  }
+  .reveal-delay-4 {
+    transition-delay: 0.4s;
+  }
 }
 
 /* Custom scrollbar */
