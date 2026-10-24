@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/assets/img/logo.jpg', Astro.site).href;
 ---
 
 <!doctype html>
@@ -17,15 +19,21 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<meta name="theme-color" content="#ff2e2e" />
+		<link rel="canonical" href={canonicalURL} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/assets/img/logo.jpg" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:site_name" content="Zerkio" />
+		<meta property="og:locale" content="es_MX" />
+		<meta property="og:image" content={ogImage} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
 		<meta name="google-adsense-account" content="ca-pub-6999979117716027" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -35,6 +43,20 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6999979117716027"
      crossorigin="anonymous" is:inline></script>
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			name: "Zerkio",
+			url: "https://zerkio.com",
+			logo: "https://zerkio.com/assets/img/zerkio-logo.png",
+			sameAs: ["https://play.google.com/store/apps/details?id=com.faccinnova.gasmovil"]
+		})} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			name: "Zerkio",
+			url: "https://zerkio.com"
+		})} />
 	</head>
 	<body class="bg-(--surface-0) text-slate-100 antialiased">
 		<slot />
