@@ -89,11 +89,15 @@ const description = "Pide gas LP desde tu celular. Rastreo en vivo, múltiples d
               <div class="relative mx-auto max-w-sm">
                 <div class="glass-panel-strong rounded-[2.5rem] p-2">
                   <div class="relative overflow-hidden rounded-4xl" style="background: linear-gradient(to bottom, var(--surface-2), var(--surface-1));">
-                    <img
-                      src="/assets/img/order-detail-in-progress.png"
-                      alt="App Zerkio"
-                      class="w-full"
-                    />
+                    <picture>
+                      <source srcset="/assets/img/order-detail-in-progress.webp" type="image/webp" />
+                      <img
+                        src="/assets/img/order-detail-in-progress.png"
+                        alt="App Zerkio"
+                        class="w-full"
+                        fetchpriority="high"
+                      />
+                    </picture>
                     <!-- Floating elements -->
                     <div class="absolute top-4 right-4 rounded-full bg-green-500/90 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm">
                       En camino
@@ -152,20 +156,24 @@ const description = "Pide gas LP desde tu celular. Rastreo en vivo, múltiples d
             <!-- Screenshots container -->
             <div class="flex gap-6 overflow-x-auto pb-8 pt-4 px-4 snap-x snap-mandatory scrollbar-hide" style="-webkit-overflow-scrolling: touch;">
               {[
-                { src: '/assets/img/order-detail-in-progress.png', alt: 'Detalle de pedido' },
-                { src: '/assets/img/map-portrait.png', alt: 'Mapa de rastreo' },
-                { src: '/assets/img/ETA-portrait.png', alt: 'Tiempo estimado' },
-                { src: '/assets/img/driver-portrait.png', alt: 'Conductor' },
-                { src: '/assets/img/cylinder-portrait.png', alt: 'Cilindro' },
+                { src: '/assets/img/order-detail-in-progress.png', webp: '/assets/img/order-detail-in-progress.webp', alt: 'Detalle de pedido' },
+                { src: '/assets/img/map-portrait.png', webp: '/assets/img/map-portrait.webp', alt: 'Mapa de rastreo' },
+                { src: '/assets/img/ETA-portrait.png', webp: '/assets/img/ETA-portrait.webp', alt: 'Tiempo estimado' },
+                { src: '/assets/img/driver-portrait.png', webp: '/assets/img/driver-portrait.webp', alt: 'Conductor' },
+                { src: '/assets/img/cylinder-portrait.png', webp: '/assets/img/cylinder-portrait.webp', alt: 'Cilindro' },
               ].map((img) => (
                 <div class="shrink-0 snap-center">
                   <div class="glass-panel-strong rounded-4xl p-3 card-hover">
                     <div class="overflow-hidden rounded-3xl " style="background-color: var(--surface-2);">
-                      <img
-                        src={img.src}
-                        alt={img.alt}
-                        class="h-125 w-auto object-cover"
-                      />
+                      <picture>
+                        <source srcset={img.webp} type="image/webp" />
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          class="h-125 w-auto object-cover"
+                          loading="lazy"
+                        />
+                      </picture>
                     </div>
                   </div>
                 </div>
@@ -231,11 +239,15 @@ const description = "Pide gas LP desde tu celular. Rastreo en vivo, múltiples d
             <div class="relative mx-auto max-w-md">
               <div class="absolute -inset-8 rounded-full bg-linear-to-r from-amber-500/10 to-red-500/10 blur-3xl"></div>
               <div class="glass-panel-strong rounded-[2.5rem] p-3 relative">
-                <img
-                  src="/assets/img/map-portrait.png"
-                  alt="App Zerkio - Rastreo"
-                  class="rounded-4xl"
-                />
+                <picture>
+                  <source srcset="/assets/img/map-portrait.webp" type="image/webp" />
+                  <img
+                    src="/assets/img/map-portrait.png"
+                    alt="App Zerkio - Rastreo"
+                    class="rounded-4xl"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
