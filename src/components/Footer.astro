@@ -32,7 +32,7 @@ const socialLinks = [
 				</div>
 				<div>
 					<p class="text-sm text-slate-400">
-						Mockups de dispositivos provistos por <a href="https://mockuphone.com/" target="_blank" class="text-md font-extrabold text-(--client-800)" >MockUPhone</a>.
+						Mockups de dispositivos provistos por <a href="https://mockuphone.com/" target="_blank" rel="noopener noreferrer" class="text-md font-extrabold text-(--client-800)" >MockUPhone</a>.
 					</p>
 				</div>
 			</div>
@@ -48,7 +48,7 @@ const socialLinks = [
 					<a
 						href={item.href}
 						target={item.href.startsWith('http') ? '_blank' : undefined}
-						rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
+						rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
 						class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-slate-300 transition hover:bg-white/10 hover:text-white"
 						aria-label={item.label}
 					>
